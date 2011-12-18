@@ -9,6 +9,9 @@ Rectangle {
     ListModel {
         id: model
 
+        property int sumA: 0
+        property int sumB: 0
+
         ListElement {
             number: 1
             teamA: 0
@@ -87,6 +90,29 @@ Rectangle {
                 }
             }
         }
+        footer {
+            Row {
+                spacing: 120
+
+                Column {
+                    Text {
+                        text: ""
+                    }
+                }
+
+                Column {
+                    Text {
+                        text: model.sumA
+                    }
+                }
+
+                Column {
+                    Text {
+                        text: model.sumB
+                    }
+                }
+            }
+        }
     }
 
     Row {
@@ -109,7 +135,14 @@ Rectangle {
                                  "number": model.count + 1,
                                  "teamA": 2,
                                  "teamB": 3
-                             })
+                             });
+                model.sumA = 0;
+                model.sumB = 0;
+                var i;
+                for(i = 0; i < model.count; ++i) {
+                    model.sumA += model.get(i).teamA;
+                    model.sumB += model.get(i).teamB;
+                }
             }
         }
     }
