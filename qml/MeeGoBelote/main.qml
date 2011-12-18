@@ -90,12 +90,27 @@ Rectangle {
     }
 
     Row {
-        anchors { left: parent.left; bottom: parent.bottom; margins: 20 }
-        spacing: 10
+        spacing: 30
+        anchors {
+            left: parent.left
+            bottom: parent.bottom
+            margins: 20
+        }
 
         TextButton {
-            text: "Remove all items"
+            text: "Remove all"
             onClicked: model.clear()
+        }
+
+        TextButton {
+            text: "Add"
+            onClicked: {
+                model.append({
+                                 "number": model.count + 1,
+                                 "teamA": 2,
+                                 "teamB": 3
+                             })
+            }
         }
     }
 }
