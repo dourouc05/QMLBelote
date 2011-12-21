@@ -10,8 +10,8 @@ function onAdded(tA, tB)
     add.visible  = false;
     btns.visible = true;
 
-    tA = parseInt(tA.text);
-    tB = parseInt(tB.text);
+    iA = parseInt(tA.text);
+    iB = parseInt(tB.text);
 
     if(isNaN(tA))
     {
@@ -22,8 +22,8 @@ function onAdded(tA, tB)
 
     model.append({
                      "number": model.count + 1,
-                     "teamA": tA,
-                     "teamB": tB
+                     "teamA": iA,
+                     "teamB": iB
                  });
 
     tA.text = "";
