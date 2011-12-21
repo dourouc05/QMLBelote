@@ -14,6 +14,8 @@ function onAdded(add, btns, tA, tB)
                      "teamA": parseInt(tA.text),
                      "teamB": parseInt(tB.text)
                  });
+    tA.text = "Team A";
+    tB.text = "Team B";
 
     model.sumA = 0;
     model.sumB = 0;

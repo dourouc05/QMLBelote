@@ -129,16 +129,31 @@ Rectangle {
         TextInput {
             id: tA
             text: "Team A"
+
+            anchors {
+                left: parent.left
+                margins: 20
+            }
         }
 
         TextInput {
             id: tB
             text: "Team B"
+
+            anchors {
+                left: parent.left
+                margins: 170
+            }
         }
 
         TextButton {
             text: "Add"
             onClicked: Belote.onAdded(add, btns, tA, tB)
+
+            anchors {
+                left: parent.left
+                margins: 350
+            }
         }
     }
 
