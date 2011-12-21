@@ -1,10 +1,20 @@
-function onAdd()
+function onAdd(add, btns)
 {
+    add.visible  = true;
+    btns.visible = false;
+}
+
+function onAdded(add, btns, tA, tB)
+{
+    add.visible  = false;
+    btns.visible = true;
+
     model.append({
                      "number": model.count + 1,
-                     "teamA": 2,
-                     "teamB": 3
+                     "teamA": parseInt(tA.text),
+                     "teamB": parseInt(tB.text)
                  });
+
     model.sumA = 0;
     model.sumB = 0;
     var i;

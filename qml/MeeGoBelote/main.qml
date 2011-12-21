@@ -117,11 +117,38 @@ Rectangle {
     }
 
     Row {
+        id: add
+        visible: false
         spacing: 30
         anchors {
             left: parent.left
             bottom: parent.bottom
-            margins: 20
+            margins: 10
+        }
+
+        TextInput {
+            id: tA
+            text: "Team A"
+        }
+
+        TextInput {
+            id: tB
+            text: "Team B"
+        }
+
+        TextButton {
+            text: "Add"
+            onClicked: Belote.onAdded(add, btns, tA, tB)
+        }
+    }
+
+    Row {
+        id: btns
+        spacing: 30
+        anchors {
+            left: parent.left
+            bottom: add.bottom
+            margins: 10
         }
 
         TextButton {
@@ -131,7 +158,7 @@ Rectangle {
 
         TextButton {
             text: "Add"
-            onClicked: Belote.onAdd()
+            onClicked: Belote.onAdd(add, btns)
         }
     }
 }
