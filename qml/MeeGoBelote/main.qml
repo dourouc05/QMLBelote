@@ -1,5 +1,6 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import "functions.js" as Belote
 
 Rectangle {
     id: container
@@ -125,25 +126,12 @@ Rectangle {
 
         TextButton {
             text: "Remove all"
-            onClicked: model.clear()
+            onClicked: Belote.onClear()
         }
 
         TextButton {
             text: "Add"
-            onClicked: {
-                model.append({
-                                 "number": model.count + 1,
-                                 "teamA": 2,
-                                 "teamB": 3
-                             });
-                model.sumA = 0;
-                model.sumB = 0;
-                var i;
-                for(i = 0; i < model.count; ++i) {
-                    model.sumA += model.get(i).teamA;
-                    model.sumB += model.get(i).teamB;
-                }
-            }
+            onClicked: Belote.onAdd()
         }
     }
 }
