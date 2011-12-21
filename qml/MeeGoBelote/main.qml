@@ -5,6 +5,8 @@ import "functions.js" as Belote
 Rectangle {
     id: container
     color: "#343434"
+    width:  500
+    height: 500
 
     ListModel {
         id: model
@@ -23,6 +25,78 @@ Rectangle {
             teamA: 0
             teamB: 0
         }
+
+        ListElement {
+            number: 3
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 4
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 5
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 6
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 7
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 8
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 9
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 10
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 11
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 12
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 13
+            teamA: 0
+            teamB: 0
+        }
+
+        ListElement {
+            number: 14
+            teamA: 0
+            teamB: 0
+        }
     }
 
     Component {
@@ -31,16 +105,18 @@ Rectangle {
         Item {
             id: delegateItem
             width: listView.width
-            height: 50
+            height: 55
             clip: true
 
             Row {
+                anchors.verticalCenter: parent.verticalCenter
                 spacing: 110
 
                 Column {
                     Text {
-                        text: "Play " + number
+                        text: "Game " + number
                         color: "grey"
+                        width: 120
                     }
                 }
 
@@ -65,6 +141,7 @@ Rectangle {
         id: listView
         model: model
         delegate: listDelegate
+        clip: true
 
         anchors {
             fill: parent
@@ -100,13 +177,14 @@ Rectangle {
                 }
             }
         }
+
         footer {
             Row {
                 spacing: 120
 
                 Column {
                     id: colS
-                    width: 97
+                    width: 107
 
                     Text {
                         text: " "
@@ -137,14 +215,16 @@ Rectangle {
     Rectangle {
         id: error
         visible: false
-        anchors {
-            verticalCenter: parent.verticalCenter
-            horizontalCenter: parent.horizontalCenter
-        }
+        height: 55
+        width: parent.width
+        color: "darkred"
+
+        anchors.verticalCenter: parent.verticalCenter
 
         Text {
             id: errorText
             text: "Error"
+            horizontalAlignment: Text.AlignHCenter
         }
     }
 
@@ -193,7 +273,7 @@ Rectangle {
 
         TextButton {
             text: "Add"
-            onClicked: Belote.onAdded(add, btns, tA, tB)
+            onClicked: Belote.onAdded(tA, tB)
 
             anchors {
                 left: parent.left
@@ -218,7 +298,7 @@ Rectangle {
 
         TextButton {
             text: "Add"
-            onClicked: Belote.onAdd(add, btns)
+            onClicked: Belote.onAdd()
         }
     }
 }

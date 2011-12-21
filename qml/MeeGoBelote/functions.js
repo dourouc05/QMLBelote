@@ -1,10 +1,11 @@
-function onAdd(add, btns)
+function onAdd()
 {
     add.visible  = true;
     btns.visible = false;
+    error.visible = false;
 }
 
-function onAdded(add, btns, tA, tB)
+function onAdded(tA, tB)
 {
     add.visible  = false;
     btns.visible = true;
@@ -14,7 +15,9 @@ function onAdded(add, btns, tA, tB)
 
     if(isNaN(tA))
     {
-
+        errorText.text = "Please enter a number."
+        error.visible = true;
+        return;
     }
 
     model.append({
@@ -23,8 +26,8 @@ function onAdded(add, btns, tA, tB)
                      "teamB": tB
                  });
 
-    tA.text = "Team A";
-    tB.text = "Team B";
+    tA.text = "";
+    tB.text = "";
 
     model.sumA = 0;
     model.sumB = 0;
@@ -33,6 +36,20 @@ function onAdded(add, btns, tA, tB)
     {
         model.sumA += model.get(i).teamA;
         model.sumB += model.get(i).teamB;
+    }
+
+    // You cannot win if you just made a valat (the only case where you can
+    // have enough points to win while being valat is to have a belote, hence
+    // two points).
+    if(model.sumA >= 101 && tA !== 2)
+    {
+        errorText.text = "Team A has won!"
+        error.visible = true;
+    }
+    else if(model.sumB >= 101 && tB !== 2)
+    {
+        errorText.text = "Team B has won!"
+        error.visible = true;
     }
 }
 
