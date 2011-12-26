@@ -142,11 +142,9 @@ Rectangle {
         model: model
         delegate: listDelegate
         clip: true
-
-        anchors {
-            fill: parent
-            margins: 20
-        }
+        interactive: true
+        anchors.fill: parent
+        anchors.margins: 20
 
         header {
             Row {
