@@ -10,10 +10,10 @@ function onAdded(tA, tB)
     add.visible  = false;
     btns.visible = true;
 
-    iA = parseInt(tA.text);
-    iB = parseInt(tB.text);
+    var iA = parseInt(tA.text);
+    var iB = parseInt(tB.text);
 
-    if(isNaN(tA))
+    if(isNaN(iA))
     {
         errorText.text = "Please enter a number."
         error.visible = true;
