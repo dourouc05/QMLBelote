@@ -22,7 +22,7 @@ Page {
 
                 Column {
                     Text {
-                        text: "Game " + number
+                        text: qsTr("Game %1").arg(number)
                         color: "grey"
                         width: 120
                     }
