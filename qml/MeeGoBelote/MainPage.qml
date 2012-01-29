@@ -56,15 +56,15 @@ Page {
                 spacing: 20
 
                 Column {
-                    Text { text: "Number"}
+                    Text { text: qsTr("Number") }
                 }
 
                 Column {
-                    Text { text: "Team A" }
+                    Text { text: qsTr("Team A") }
                 }
 
                 Column {
-                    Text { text: "Team B" }
+                    Text { text: qsTr("Team B") }
                 }
             }
         }
