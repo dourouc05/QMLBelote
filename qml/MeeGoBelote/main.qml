@@ -24,7 +24,12 @@ PageStackWindow {
         id: myMenu
         visualParent: pageStack
         MenuLayout {
-            MenuItem { text: qsTr("Empty") }
+            MenuItem {
+                text: qsTr("Empty")
+                onClicked: {
+                    mainPage.modelname.clear();
+                }
+            }
         }
     }
 }

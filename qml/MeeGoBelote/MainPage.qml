@@ -3,6 +3,7 @@ import com.nokia.meego 1.0
 
 Page {
     tools: commonTools
+    property GamesModel modelname: model
 
     GamesModel {
         id: model
