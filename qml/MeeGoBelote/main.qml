@@ -28,6 +28,8 @@ PageStackWindow {
                 text: qsTr("Empty")
                 onClicked: {
                     mainPage.modelname.clear();
+                    mainPage.modelname.sumA = 0;
+                    mainPage.modelname.sumB = 0;
                 }
             }
         }
