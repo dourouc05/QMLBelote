@@ -1,8 +1,6 @@
 import QtQuick 1.1
 
 ListModel {
-    id: model
-
     property int sumA: 0
     property int sumB: 0
 
