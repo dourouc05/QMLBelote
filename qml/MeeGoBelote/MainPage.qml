@@ -8,79 +8,6 @@ Page {
         id: model
     }
 
-    ListView {
-        id: listView
-        model: model
-        delegate: listDelegate
-        clip: true
-        interactive: true
-        anchors.fill: parent
-        anchors.margins: 20
-
-        header {
-            Row {
-                spacing: 15
-
-                Column {
-                    id: colN
-
-                    Text {
-                        text: "Number"
-                    }
-                }
-
-                Column {
-                    id: colA
-
-                    Text {
-                        text: "Team A"
-                    }
-                }
-
-                Column {
-                    id: colB
-
-                    Text {
-                        text: "Team B"
-                    }
-                }
-            }
-        }
-
-        footer {
-            Row {
-                spacing: 120
-
-                Column {
-                    id: colS
-                    width: 107
-
-                    Text {
-                        text: " "
-                    }
-                }
-
-                Column {
-                    id: colSA
-                    width: 15
-
-                    Text {
-                        text: model.sumA
-                    }
-                }
-
-                Column {
-                    id: colSB
-                    width: 15
-
-                    Text {
-                        text: model.sumB
-                    }
-                }
-            }
-        }
-    }
-
     Component {
         id: listDelegate
 
@@ -88,7 +15,6 @@ Page {
             id: delegateItem
             width: listView.width
             height: 55
-            clip: true
 
             Row {
                 anchors.verticalCenter: parent.verticalCenter
@@ -114,6 +40,55 @@ Page {
                         text: teamB
                         color: "white"
                     }
+                }
+            }
+        }
+    }
+
+    ListView {
+        id: listView
+        model: model
+        delegate: listDelegate
+        anchors.fill: parent
+
+        header {
+            Row {
+                spacing: 20
+
+                Column {
+                    Text { text: "Number"}
+                }
+
+                Column {
+                    Text { text: "Team A" }
+                }
+
+                Column {
+                    Text { text: "Team B" }
+                }
+            }
+        }
+
+        footer {
+            Row {
+                spacing: 120
+
+                Column {
+                    width: 107
+
+                    Text { text: " " }
+                }
+
+                Column {
+                    width: 15
+
+                    Text { text: model.sumA }
+                }
+
+                Column {
+                    width: 15
+
+                    Text { text: model.sumB }
                 }
             }
         }
