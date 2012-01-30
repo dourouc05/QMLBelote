@@ -4,6 +4,7 @@ import "Belote.js" as Belote
 
 Page {
     tools: commonTools
+    property ListModel model: model
 
     ListModel {
         id: model

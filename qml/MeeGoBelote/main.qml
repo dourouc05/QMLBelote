@@ -1,5 +1,6 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import "Belote.js" as Belote
 
 PageStackWindow {
     id: appWindow
@@ -21,11 +22,7 @@ PageStackWindow {
         MenuLayout {
             MenuItem {
                 text: qsTr("Empty")
-                onClicked: {
-                    mainPage.modelname.clear();
-                    mainPage.modelname.sumA = 0;
-                    mainPage.modelname.sumB = 0;
-                }
+                onClicked: Belote.emptyModel(initialPage.model)
             }
         }
     }
