@@ -13,7 +13,7 @@ Page {
         property int sumB: 0
     }
 
-    Component.onCompleted: Belote.fillModel(model)
+    Component.onCompleted: { Belote.initModel(model); Belote.fillModel(); }
 
     Component {
         id: listDelegate

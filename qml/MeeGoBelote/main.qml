@@ -22,7 +22,12 @@ PageStackWindow {
         MenuLayout {
             MenuItem {
                 text: qsTr("Empty")
-                onClicked: Belote.emptyModel(initialPage.model)
+                onClicked: Belote.emptyModel()
+            }
+
+            MenuItem {
+                text: qsTr("Add game")
+                onClicked: Belote.addGame(pageStack)
             }
         }
     }
