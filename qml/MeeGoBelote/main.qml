@@ -7,6 +7,19 @@ PageStackWindow {
 
     initialPage: MainPage {}
 
+    AddGamePage {
+        id: addGame
+    }
+
+    ListModel {
+        id: commonModel
+
+        property int sumA: 0
+        property int sumB: 0
+    }
+
+    Component.onCompleted: Belote.fillModel()
+
     ToolBarLayout {
         id: commonTools
         ToolIcon {
@@ -27,7 +40,7 @@ PageStackWindow {
 
             MenuItem {
                 text: qsTr("Add game")
-                onClicked: Belote.addGame(pageStack)
+                onClicked: pageStack.push(addGame)
             }
         }
     }

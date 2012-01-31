@@ -4,16 +4,6 @@ import "Belote.js" as Belote
 
 Page {
     tools: commonTools
-    property ListModel model: model
-
-    ListModel {
-        id: model
-
-        property int sumA: 0
-        property int sumB: 0
-    }
-
-    Component.onCompleted: { Belote.initModel(model); Belote.fillModel(); }
 
     Component {
         id: listDelegate
@@ -54,7 +44,7 @@ Page {
 
     ListView {
         id: listView
-        model: model
+        model: commonModel
         delegate: listDelegate
         anchors.fill: parent
 
@@ -89,13 +79,13 @@ Page {
                 Column {
                     width: 15
 
-                    Text { text: model.sumA }
+                    Text { text: commonModel.sumA }
                 }
 
                 Column {
                     width: 15
 
-                    Text { text: model.sumB }
+                    Text { text: commonModel.sumB }
                 }
             }
         }

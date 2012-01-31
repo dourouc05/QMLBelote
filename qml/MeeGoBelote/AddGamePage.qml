@@ -3,9 +3,6 @@ import com.nokia.meego 1.0
 import "Belote.js" as Belote
 
 Page {
-//    tools: commonTools
-    property ListModel model
-
     TextField {
         id: ta
 
