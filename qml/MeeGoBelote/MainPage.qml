@@ -3,7 +3,29 @@ import com.nokia.meego 1.0
 import "Belote.js" as Belote
 
 Page {
-    tools: commonTools
+    tools: ToolBarLayout {
+        ToolIcon {
+            platformIconId: "toolbar-view-menu"
+            anchors.right: parent.right
+            onClicked: (myMenu.status == DialogStatus.Closed) ? myMenu.open() : myMenu.close()
+        }
+    }
+
+    Menu {
+        id: myMenu
+        visualParent: pageStack
+        MenuLayout {
+            MenuItem {
+                text: qsTr("Empty")
+                onClicked: Belote.emptyModel()
+            }
+
+            MenuItem {
+                text: qsTr("Add game")
+                onClicked: pageStack.push(addGame)
+            }
+        }
+    }
 
     Component {
         id: listDelegate
