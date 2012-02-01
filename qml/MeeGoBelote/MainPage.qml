@@ -20,21 +20,21 @@ Page {
                 Text {
                     text: qsTr("Game %1").arg(number)
                     color: "grey"
-                    width: 120
+                    width: 130
                 }
 
                 Text {
                     text: teamA
                     color: "white"
                     horizontalAlignment: Text.AlignRight
-                    width: 40
+                    width: 35
                 }
 
                 Text {
                     text: teamB
                     color: "white"
                     horizontalAlignment: Text.AlignRight
-                    width: 40
+                    width: 35
                 }
             }
         }
@@ -60,23 +60,9 @@ Page {
             Row {
                 spacing: 120
 
-                Column {
-                    width: 107
-
-                    Text { text: " " }
-                }
-
-                Column {
-                    width: 15
-
-                    Text { text: commonModel.sumA }
-                }
-
-                Column {
-                    width: 15
-
-                    Text { text: commonModel.sumB }
-                }
+                Text { text: " "; width: 107 }
+                Text { text: commonModel.sumA; width: 15 }
+                Text { text: commonModel.sumB; width: 15 }
             }
         }
     }
