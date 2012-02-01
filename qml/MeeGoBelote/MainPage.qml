@@ -17,26 +17,24 @@ Page {
                 anchors.verticalCenter: parent.verticalCenter
                 spacing: 110
 
-                Column {
-                    Text {
-                        text: qsTr("Game %1").arg(number)
-                        color: "grey"
-                        width: 120
-                    }
+                Text {
+                    text: qsTr("Game %1").arg(number)
+                    color: "grey"
+                    width: 120
                 }
 
-                Column {
-                    Text {
-                        text: teamA
-                        color: "white"
-                    }
+                Text {
+                    text: teamA
+                    color: "white"
+                    horizontalAlignment: Text.AlignRight
+                    width: 40
                 }
 
-                Column {
-                    Text {
-                        text: teamB
-                        color: "white"
-                    }
+                Text {
+                    text: teamB
+                    color: "white"
+                    horizontalAlignment: Text.AlignRight
+                    width: 40
                 }
             }
         }
@@ -52,17 +50,9 @@ Page {
             Row {
                 spacing: 20
 
-                Column {
-                    Text { text: qsTr("Number") }
-                }
-
-                Column {
-                    Text { text: qsTr("Team A") }
-                }
-
-                Column {
-                    Text { text: qsTr("Team B") }
-                }
+                Text { text: qsTr("Number"); width: 160 }
+                Text { text: qsTr("Team A") }
+                Text { text: qsTr("Team B") }
             }
         }
 
