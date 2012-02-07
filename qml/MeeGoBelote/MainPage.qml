@@ -55,6 +55,8 @@ Page {
                     text: qsTr("Game %1").arg(number)
                     color: "grey"
                     width: 130
+                    font.pointSize: 32
+                    font.family: "Nokia Pure Text"
                 }
 
                 Text {
@@ -62,6 +64,8 @@ Page {
                     color: "white"
                     horizontalAlignment: Text.AlignRight
                     width: 35
+                    font.pointSize: 32
+                    font.family: "Nokia Pure Text"
                 }
 
                 Text {
@@ -69,6 +73,8 @@ Page {
                     color: "white"
                     horizontalAlignment: Text.AlignRight
                     width: 35
+                    font.pointSize: 32
+                    font.family: "Nokia Pure Text"
                 }
             }
         }
@@ -84,9 +90,9 @@ Page {
             Row {
                 spacing: 20
 
-                Text { text: qsTr("Number"); width: 160 }
-                Text { text: qsTr("Team A") }
-                Text { text: qsTr("Team B") }
+                Text { text: qsTr("Number"); width: 160; font.pointSize: 32; font.family: "Nokia Pure Text"; }
+                Text { text: qsTr("Team A"); font.pointSize: 32; font.family: "Nokia Pure Text"; }
+                Text { text: qsTr("Team B"); font.pointSize: 32; font.family: "Nokia Pure Text"; }
             }
         }
 
@@ -95,8 +101,8 @@ Page {
                 spacing: 120
 
                 Text { text: " "; width: 107 }
-                Text { text: commonModel.sumA; width: 15 }
-                Text { text: commonModel.sumB; width: 15 }
+                Text { text: commonModel.sumA; width: 15; font.pointSize: 32; font.family: "Nokia Pure Text"; }
+                Text { text: commonModel.sumB; width: 15; font.pointSize: 32; font.family: "Nokia Pure Text"; }
             }
         }
     }
