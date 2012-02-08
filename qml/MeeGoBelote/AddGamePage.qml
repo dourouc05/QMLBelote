@@ -3,12 +3,12 @@ import com.nokia.meego 1.0
 import "Belote.js" as Belote
 
 Page {
-//    tools: ToolBarLayout {
-//        ToolIcon {
-//            iconId: "toolbar-back";
-//            onClicked: { pageStack.pop(); }
-//        }
-//    }
+    tools: ToolBarLayout {
+        ToolIcon {
+            iconId: "toolbar-back";
+            onClicked: { pageStack.pop(); }
+        }
+    }
 
     TextField {
         id: ta
