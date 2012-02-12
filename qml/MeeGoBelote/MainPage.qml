@@ -28,7 +28,7 @@ Page {
         visualParent: pageStack
         MenuLayout {
             MenuItem {
-                text: qsTr("Empty")
+                text: qsTr("Clear")
                 onClicked: Belote.emptyModel()
             }
 
@@ -39,51 +39,10 @@ Page {
         }
     }
 
-    Component {
-        id: listDelegate
-
-        Item {
-            id: delegateItem
-            width: listView.width
-            height: 55
-
-            Row {
-                anchors.verticalCenter: parent.verticalCenter
-                spacing: 110
-
-                Text {
-                    text: qsTr("Game %1").arg(number)
-                    color: "grey"
-                    width: 130
-                    font.pointSize: 32
-                    font.family: "Nokia Pure Text"
-                }
-
-                Text {
-                    text: teamA
-                    color: "white"
-                    horizontalAlignment: Text.AlignRight
-                    width: 35
-                    font.pointSize: 32
-                    font.family: "Nokia Pure Text"
-                }
-
-                Text {
-                    text: teamB
-                    color: "white"
-                    horizontalAlignment: Text.AlignRight
-                    width: 35
-                    font.pointSize: 32
-                    font.family: "Nokia Pure Text"
-                }
-            }
-        }
-    }
-
     ListView {
         id: listView
         model: commonModel
-        delegate: listDelegate
+        delegate: MainDelegate {}
         anchors.fill: parent
 
         header {
