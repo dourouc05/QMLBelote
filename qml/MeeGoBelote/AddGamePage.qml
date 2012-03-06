@@ -17,6 +17,7 @@ Page {
         maximumLength: 20
         errorHighlight: !acceptableInput
         validator: IntValidator{bottom: 0; top: 50;}
+        inputMethodHints: Qt.ImhDigitsOnly
 
         anchors {
             verticalCenter: parent.verticalCenter
@@ -32,6 +33,7 @@ Page {
         maximumLength: 20
         errorHighlight: !acceptableInput
         validator: IntValidator{bottom: 0; top: 50;}
+        inputMethodHints: Qt.ImhDigitsOnly
 
         anchors {
             horizontalCenter: parent.horizontalCenter

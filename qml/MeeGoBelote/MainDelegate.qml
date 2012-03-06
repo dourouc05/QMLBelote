@@ -14,7 +14,7 @@ Item {
             text: qsTr("Game %1").arg(number)
             color: "grey"
             width: 130
-            font.pointSize: 32
+            font.pixelSize: 43
             font.family: "Nokia Pure Text"
         }
 
@@ -23,7 +23,7 @@ Item {
             color: "white"
             horizontalAlignment: Text.AlignRight
             width: 35
-            font.pointSize: 32
+            font.pixelSize: 43
             font.family: "Nokia Pure Text"
         }
 
@@ -32,7 +32,7 @@ Item {
             color: "white"
             horizontalAlignment: Text.AlignRight
             width: 35
-            font.pointSize: 32
+            font.pixelSize: 43
             font.family: "Nokia Pure Text"
         }
     }
