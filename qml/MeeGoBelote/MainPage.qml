@@ -39,23 +39,19 @@ Page {
         }
     }
 
-    AddGamePage {
-        id: addGame
-    }
-
     ListView {
         id: listView
         model: commonModel
-        delegate: MainDelegate{}
+        delegate: MainDelegate {}
         anchors.fill: parent
 
         header {
             Row {
                 spacing: 20
 
-                Text { text: qsTr("Number"); width: 160 }
-                Text { text: qsTr("Team A") }
-                Text { text: qsTr("Team B") }
+                Text { text: qsTr("Number"); width: 156; font.pixelSize: 43; font.family: "Nokia Pure Text"; }
+                Text { text: qsTr("Team A");             font.pixelSize: 43; font.family: "Nokia Pure Text"; }
+                Text { text: qsTr("Team B");             font.pixelSize: 43; font.family: "Nokia Pure Text"; }
             }
         }
 
@@ -64,8 +60,8 @@ Page {
                 spacing: 120
 
                 Text { text: " "; width: 107 }
-                Text { text: commonModel.sumA; width: 15 }
-                Text { text: commonModel.sumB; width: 15 }
+                Text { text: commonModel.sumA; width: 16; font.pixelSize: 43; font.family: "Nokia Pure Text"; }
+                Text { text: commonModel.sumB; width: 16; font.pixelSize: 43; font.family: "Nokia Pure Text"; }
             }
         }
     }
