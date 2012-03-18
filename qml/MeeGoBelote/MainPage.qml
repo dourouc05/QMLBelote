@@ -36,6 +36,11 @@ Page {
                 text: qsTr("Add game")
                 onClicked: pageStack.push(addGame)
             }
+
+            MenuItem {
+                text: qsTr("Delete last entry")
+                onClicked: Belote.popModel()
+            }
         }
     }
 

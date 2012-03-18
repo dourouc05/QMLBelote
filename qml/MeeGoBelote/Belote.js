@@ -32,3 +32,9 @@ function updateModel(data) {
     commonModel.sumA += data.teamA;
     commonModel.sumB += data.teamB;
 }
+
+function popModel() {
+    commonModel.sumA -= commonModel.get(commonModel.count - 1).teamA;
+    commonModel.sumB -= commonModel.get(commonModel.count - 1).teamB;
+    commonModel.remove(commonModel.count - 1);
+}
