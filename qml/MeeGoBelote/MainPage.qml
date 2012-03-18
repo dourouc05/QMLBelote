@@ -1,5 +1,6 @@
 import QtQuick 1.1
 import com.nokia.meego 1.0
+import "Belote.js" as Belote
 
 Page {
     tools: ToolBarLayout {
@@ -16,11 +17,7 @@ Page {
         MenuLayout {
             MenuItem {
                 text: qsTr("Clear")
-                onClicked: {
-                    commonModel.clear();
-                    commonModel.sumA = 0;
-                    commonModel.sumB = 0;
-                }
+                onClicked: Belote.emptyModel()
             }
         }
     }

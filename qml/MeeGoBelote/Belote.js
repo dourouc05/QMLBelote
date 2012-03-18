@@ -6,3 +6,9 @@ function fillModel() {
         commonModel.sumB += data.teamB;
     }
 }
+
+function emptyModel() {
+    commonModel.clear();
+    commonModel.sumA = 0;
+    commonModel.sumB = 0;
+}
