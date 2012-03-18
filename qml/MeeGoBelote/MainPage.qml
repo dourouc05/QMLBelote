@@ -10,14 +10,6 @@ Page {
         }
     }
 
-    Menu {
-        id: myMenu
-        visualParent: pageStack
-        MenuLayout {
-            MenuItem { text: qsTr("Sample menu item") }
-        }
-    }
-
     ListView {
         id: listView
         model: commonModel
@@ -28,9 +20,9 @@ Page {
             Row {
                 spacing: 20
 
-                Text { text: "Number"; width: 160 }
-                Text { text: "Team A" }
-                Text { text: "Team B" }
+                Text { text: qsTr("Number"); width: 160 }
+                Text { text: qsTr("Team A") }
+                Text { text: qsTr("Team B") }
             }
         }
 
