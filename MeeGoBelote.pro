@@ -43,4 +43,8 @@ OTHER_FILES += \
     qtc_packaging/debian_harmattan/copyright \
     qtc_packaging/debian_harmattan/control \
     qtc_packaging/debian_harmattan/compat \
-    qtc_packaging/debian_harmattan/changelog
+    qtc_packaging/debian_harmattan/changelog \
+    qml/MeeGoBelote/GamesModel.qml \
+    qml/MeeGoBelote/Belote.js \
+    qml/MeeGoBelote/AddGamePage.qml \
+    qml/MeeGoBelote/MainDelegate.qml
