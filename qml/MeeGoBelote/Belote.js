@@ -12,3 +12,23 @@ function emptyModel() {
     commonModel.sumA = 0;
     commonModel.sumB = 0;
 }
+
+function pushGame(a, b) {
+    var ia = parseInt(a.text);
+    var ib = parseInt(b.text);
+
+    if(! isNaN(ia) && ! isNaN(ib))
+    {
+        updateModel({"number": commonModel.count + 1, "teamA": ia, "teamB": ib});
+        appWindow.pageStack.pop();
+
+        a.text = "";
+        b.text = "";
+    }
+}
+
+function updateModel(data) {
+    commonModel.append(data);
+    commonModel.sumA += data.teamA;
+    commonModel.sumB += data.teamB;
+}
