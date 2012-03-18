@@ -31,6 +31,20 @@ function updateModel(data) {
     commonModel.append(data);
     commonModel.sumA += data.teamA;
     commonModel.sumB += data.teamB;
+
+    // Then check whether someone have won
+    if(! commonModel.goOn) {
+        if(commonModel.sumA >= 101) {
+            commonQueryDialog.titleText = "Team A has won!"
+            commonQueryDialog.message   = "Team A has won, would you like to reset scores or to go on? "
+            commonQueryDialog.open()
+        }
+        if (commonModel.sumB >= 101) {
+            commonQueryDialog.titleText = "Team B has won!"
+            commonQueryDialog.message   = "Team B has won, would you like to reset scores or to go on? "
+            commonQueryDialog.open()
+        }
+    }
 }
 
 function popModel() {
