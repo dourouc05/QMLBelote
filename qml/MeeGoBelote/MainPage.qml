@@ -10,6 +10,21 @@ Page {
         }
     }
 
+    Menu {
+        id: myMenu
+        visualParent: pageStack
+        MenuLayout {
+            MenuItem {
+                text: qsTr("Clear")
+                onClicked: {
+                    commonModel.clear();
+                    commonModel.sumA = 0;
+                    commonModel.sumB = 0;
+                }
+            }
+        }
+    }
+
     ListView {
         id: listView
         model: commonModel
