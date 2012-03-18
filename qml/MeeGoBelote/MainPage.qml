@@ -19,7 +19,16 @@ Page {
                 text: qsTr("Clear")
                 onClicked: Belote.emptyModel()
             }
+
+            MenuItem {
+                text: qsTr("Add game")
+                onClicked: pageStack.push(addGame)
+            }
         }
+    }
+
+    AddGamePage {
+        id: addGame
     }
 
     ListView {
