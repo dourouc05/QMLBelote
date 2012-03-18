@@ -5,6 +5,18 @@ import "Belote.js" as Belote
 Page {
     tools: ToolBarLayout {
         ToolIcon {
+            platformIconId: "toolbar-delete"
+            anchors.left: parent.left
+            onClicked: Belote.emptyModel()
+        }
+
+        ToolIcon {
+            platformIconId: "toolbar-add"
+            anchors.horizontalCenter: parent.horizontalCenter
+            onClicked: pageStack.push(addGame)
+        }
+
+        ToolIcon {
             platformIconId: "toolbar-view-menu"
             anchors.right: parent.right
             onClicked: (myMenu.status == DialogStatus.Closed) ? myMenu.open() : myMenu.close()
